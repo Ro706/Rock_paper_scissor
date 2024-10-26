@@ -1,0 +1,198 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #333;
+  }
+  
+  .game-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    margin-top:1%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #444;
+  }
+  
+  /* Layout adjustments for the triangle */
+  .triangle {
+    display: grid;
+    grid-template-areas: 
+      "rock paper"
+      "scissors scissors";
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #rock {
+    grid-area: rock;
+  }
+  
+  #paper {
+    grid-area: paper;
+  }
+  
+  #scissors {
+    grid-area: scissors;
+    justify-self: center; /* Center scissors in the grid */
+  }
+  
+  
+  /* Choice buttons */
+  .choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    border: 1px solid #555;
+    cursor: pointer;
+  }
+  
+  .choice:hover {
+    background-color: #555;
+  }
+  
+  img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Play button */
+  .play-button {
+    background-color: #081b31;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .play-button:hover {
+    background-color: #0a1a2a;
+  }
+  
+  /* Scoreboard */
+  .score-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
+  }
+  
+  #user-score,
+  #comp-score {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Message display */
+  .msg-container {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  #msg {
+    background-color: #081b31;
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  /* Popup for username input */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    display: none;
+  }
+  
+  .popup input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .popup input[type="text"]:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup button {
+    background-color: #081b31;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: #0a1a2a;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .game-container {
+      width: 90%;
+    }
+    .choice {
+      height: 120px;
+      width: 120px;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .game-container {
+      width: 95%;
+    }
+    .choice {
+      height: 90px;
+      width: 90px;
+    }
+    img {
+      height: 80px;
+      width: 80px;
+    }
+    .score-board {
+      font-size: 1.2rem;
+    }
+    #user-score,
+    #comp-score {
+      font-size: 1.5rem;
+    }
+  }
+  

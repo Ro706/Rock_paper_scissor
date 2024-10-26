@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <div class="game-container">
+        <!-- Scoreboard -->
+        <div class="score-board">
+          <div id="user-name">User</div>
+          <div>Score: <span id="user-score">0</span></div>
+          <div>Computer: <span id="comp-score">0</span></div>
+        </div>
+      
+        <!-- Message Display -->
+        <div class="msg-container">
+          <div id="msg">Click "Play" to start the game!</div>
+        </div>
+      
+        <!-- Triangle Layout for Choices -->
+        <div class="triangle">
+          <div class="choice" id="rock">
+            <img src="./images/rock.png" alt="Rock">
+          </div>
+          <div class="choice" id="paper">
+            <img src="./images/paper.png" alt="Paper">
+          </div>
+          <div class="choice" id="scissors">
+            <img src="./images/scissors.png" alt="Scissors">
+          </div>
+        </div>
+      
+        <!-- Play Button -->
+        <button class="play-button" id="play-btn">Play</button>
+      
+        <!-- Popup for Username Input -->
+        <div class="popup" id="popup">
+          <div class="popup-content">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button id="start-btn">Start Game</button>
+          </div>
+        </div>
+      </div>
+      
+  <script src="app.js"></script>
+</body>
+</html>
